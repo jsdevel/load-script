@@ -15,6 +15,23 @@ test('success', function(done) {
   })
 });
 
+test('opts.attrs', function(done) {
+  load('test/hello.js', {attrs: {foo: 'boo'}}, function(err, script) {
+    assert.ifError(err);
+    assert.equal(script.getAttribute('foo'), 'boo')
+    done();
+  })
+});
+
+test('opts.text', function(done) {
+  load('test/hello.js', {text: 'foo'}, function(err, script) {
+    assert.ifError(err);
+    assert.equal(script.childNodes.length, 1)
+    assert.equal(script.childNodes[0].nodeValue, 'foo')
+    done();
+  })
+});
+
 test('no exist', function(done) {
   load('unexistent.js', function (err, legacy) {
     if (!legacy) {
