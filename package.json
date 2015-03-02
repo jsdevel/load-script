@@ -1,18 +1,18 @@
 {
-  "name": "load-script",
+  "name": "jsdevel-load-script",
   "description": "Dynamic script loading for browser",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "keywords": [
     "browser",
     "script",
-    "load"
+    "load",
+    "jsdevel"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/eldargab/load-script"
+    "url": "git://github.com/jsdevel/jsdevel-load-script"
   },
   "scripts": {
-    "test": "zuul -- test/index.js",
     "test-local": "zuul --local 9005 -- test/index.js"
   },
   "devDependencies": {
